@@ -1,9 +1,9 @@
 package Drive;
 
-import java.io.File;
+import file.File;
 
 public interface Drive {
     void addFile(File file);
     void listFiles();
-    File findFile(String name);
+    file.File findFile(String name);
 }
