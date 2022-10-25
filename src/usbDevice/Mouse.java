@@ -1,6 +1,6 @@
 package usbDevice;
 
-public class Mouse implements USBDevice{
+public class Mouse implements USBDevice {
     private String name;
 
     public Mouse(String name) {

@@ -1,6 +1,6 @@
 package usbDevice;
 
-public class MemoryStick implements USBDevice{
+public class MemoryStick implements USBDevice {
     private String name;
     private boolean ejected = false;
 
@@ -16,17 +16,19 @@ public class MemoryStick implements USBDevice{
 
     @Override
     public boolean disconnect() {
-        if(!ejected){
+        if (!ejected) {
             System.out.println("Please eject Memory Stick first");
             return false;
         }
         System.out.println("Disconnected Memory Stick");
         return true;
     }
-    public void eject(){
+
+    public void eject() {
         System.out.println("Ejecting memory Stick");
         ejected = true;
     }
+
     @Override
     public String getName() {
         return name;
