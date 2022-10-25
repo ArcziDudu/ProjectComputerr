@@ -1,6 +1,7 @@
 package Drive;
 
 import java.io.File;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,16 +9,19 @@ public class SSDDrive implements Drive{
     Map<String, File> files = new HashMap<>();
     @Override
     public void addFile(File file) {
-        file.put(file.toString(), file);
+        files.put(file.toString(), file);
     }
 
     @Override
     public void listFiles() {
-
+        Collection<File> fileCollection = files.values();
+        for (File file : fileCollection) {
+            System.out.println(file.getName());
+        }
     }
 
     @Override
     public File findFile(String name) {
-        return null;
+        return files.get(name);
     }
 }
